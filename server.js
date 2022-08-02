@@ -54,6 +54,6 @@ server.get("/api/id/:query", async (req, res) => {
   res.json(resp);
 });
 
-server.listen(3001, () => {
+server.listen(process.env.PORT || 3001, () => {
   console.log("Server is running on port 3001");
 });
