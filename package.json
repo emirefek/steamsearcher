@@ -8,6 +8,10 @@
     "dev": "nodemon server.js",
     "start": "node server.js"
   },
+  "engines": {
+    "node": "18.x",
+    "npm": "8.x"
+  },
   "author": "emirefek",
   "license": "MIT",
   "dependencies": {
