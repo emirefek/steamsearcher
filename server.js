@@ -7,14 +7,14 @@ const path = require("path");
 
 server.use(cors());
 
-server.use(Express.static(path.join(__dirname, "react")));
+server.use(Express.static(path.join(__dirname, "frontend", "build")));
 
 server.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "react", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
 server.get("/id/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "react", "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
 server.get("/api", (req, res) => {
@@ -54,6 +54,6 @@ server.get("/api/id/:query", async (req, res) => {
   res.json(resp);
 });
 
-server.listen(process.env.PORT || 3001, () => {
-  console.log("Server is running on port 3001");
+server.listen(process.env.PORT || 3000, () => {
+  console.log("Server is running on port 3000");
 });
